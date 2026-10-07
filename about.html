@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Sakura Sushi - Our story, Japanese culinary philosophy, and college project information.">
+  <title>About Us | Sakura Sushi - Fresh Sushi. Authentic Taste.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Sakura Sushi Homepage">
+        <span class="logo-stamp">桜</span>
+        <div class="logo-text-wrap">
+          <span>Sakura Sushi</span>
+          <span class="logo-tagline-tiny">Fresh • Authentic</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <a href="cart.html" class="nav-cart-btn" aria-label="Shopping Cart">
+          <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-badge badge-hidden" id="nav-cart-count">0</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       ABOUT HERO & OUR STORY
+       ========================================== -->
+  <main>
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-card">
+            <img src="images/about-restaurant.jpg" alt="Sakura Sushi restaurant dining ambiance and sushi bar" class="about-img">
+          </div>
+
+          <div class="about-content">
+            <span class="section-tag">Tradition Meets Innovation</span>
+            <h1>Our Story</h1>
+            <p class="about-lead">
+              Inspired by the serene beauty of Kyoto cherry blossoms and the meticulous art of sushi craftsmanship.
+            </p>
+            <p>
+              Sakura Sushi began with an appreciation for authentic Japanese culinary principles: letting pristine, uncompromised ingredients speak for themselves through patience, knife mastery, and precise seasoning.
+            </p>
+            <p>
+              From hand-forming warm vinegared rice for each nigiri piece to simmering our ramen bone broths for twelve unhurried hours, we celebrate the philosophy of <em>shokunin</em>—the endless pursuit of culinary refinement.
+            </p>
+
+            <!-- Honest Academic Notice Required by Guidelines -->
+            <div class="college-project-notice">
+              <h4>🎓 Academic Project Disclosure</h4>
+              <p>
+                <strong>Sakura Sushi</strong> is a conceptual Japanese restaurant website developed as a <strong>first-year college web development project</strong>. It demonstrates modern responsive frontend design, client-side data management using Vanilla JavaScript & LocalStorage, and accessible UI/UX. This is not an operating commercial business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         OUR PHILOSOPHY SECTION
+         ========================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Values</span>
+          <h2 class="section-title">Our Philosophy</h2>
+          <div class="japanese-divider">
+            <span class="divider-icon">🌸</span>
+          </div>
+          <p class="section-subtitle">
+            Four guiding principles that shape every recipe, knife stroke, and guest interaction.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <div class="philosophy-icon">🐟</div>
+            <h3>Fresh Ingredients</h3>
+            <p>We believe great sushi requires uncompromising freshness—from sustainably raised Atlantic salmon to freshly grated real wasabi.</p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="philosophy-icon">🔪</div>
+            <h3>Simple Preparation</h3>
+            <p>Japanese food honors nature. We highlight natural flavors through minimal processing, correct cutting angles, and balanced rice vinegar.</p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="philosophy-icon">🥢</div>
+            <h3>Great Taste</h3>
+            <p>Achieving harmony between umami, acidity, sweetness, and delicate crunch across every roll, nigiri, and steaming bowl of ramen.</p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="philosophy-icon">🍵</div>
+            <h3>Friendly Experience</h3>
+            <p>Embodying <em>Omotenashi</em>—the Japanese art of selfless hospitality—making every customer feel welcomed, respected, and delighted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         COLLEGE VIVA & ARCHITECTURE NOTES
+         ========================================== -->
+    <section class="viva-dev-section">
+      <div class="container">
+        <div class="viva-card">
+          <div class="viva-header">
+            <span class="viva-badge">Viva Presentation Guide</span>
+            <h3 style="font-size: 1.25rem;">Technical Implementation Overview</h3>
+          </div>
+
+          <p style="color: var(--color-text-muted); font-size: 0.92rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            This project is intentionally engineered using standard Web Standards (HTML5, CSS3, and Vanilla JavaScript ES6+) so that any first-year student can confidently explain the code to an external examiner during a practical viva examination:
+          </p>
+
+          <div class="viva-points-grid">
+            <div class="viva-point">
+              <h4>1. Semantic HTML5 Architecture</h4>
+              <p>Constructed using semantic tags (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>) for clean code hierarchy and accessibility.</p>
+            </div>
+
+            <div class="viva-point">
+              <h4>2. Pure CSS3 with Modern Layouts</h4>
+              <p>Built using CSS Grid, Flexbox, custom CSS Variables for theming, and media queries for responsive mobile adaptation without external CSS frameworks.</p>
+            </div>
+
+            <div class="viva-point">
+              <h4>3. Vanilla JavaScript State & DOM</h4>
+              <p>Zero dependencies or frameworks. Items are rendered dynamically using array methods (<code>filter()</code>, <code>map()</code>, <code>reduce()</code>) and template literals.</p>
+            </div>
+
+            <div class="viva-point">
+              <h4>4. LocalStorage Data Persistence</h4>
+              <p>Preserves shopping cart items and the placed order ID across page refreshes and multi-page checkout flow using <code>localStorage.setItem()</code> and <code>getItem()</code>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 0.75rem;">
+            <span class="logo-stamp">桜</span>
+            <span>Sakura Sushi</span>
+          </a>
+          <p class="footer-tagline">Fresh Sushi. Authentic Taste.</p>
+          <p class="footer-about-text">
+            Handcrafted Japanese sushi, nigiri, and ramen made with fresh, sustainable ingredients and sincere culinary dedication.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <div class="footer-hours-list">
+            <p><strong>Monday – Friday:</strong><br>11:00 AM – 10:30 PM</p>
+            <p><strong>Saturday – Sunday:</strong><br>11:00 AM – 11:00 PM</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Visit & Connect</h4>
+          <p style="color: #a8a096; font-size: 0.88rem; line-height: 1.5; margin-bottom: 0.75rem;">
+            123 Sakura Street, Ludhiana, Punjab<br>
+            Phone: +91 98765 43210<br>
+            Email: hello@sakurasushi.example
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sakura Sushi. College Project.</p>
+        <p>Built with HTML5, CSS3 & Vanilla JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>

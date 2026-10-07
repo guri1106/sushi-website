@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our authentic Japanese menu: hand-rolled sushi, nigiri, sashimi, rich ramen bowls, appetizers, drinks, and matcha desserts.">
+  <title>Menu | Sakura Sushi - Fresh Sushi. Authentic Taste.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Sakura Sushi Homepage">
+        <span class="logo-stamp">桜</span>
+        <div class="logo-text-wrap">
+          <span>Sakura Sushi</span>
+          <span class="logo-tagline-tiny">Fresh • Authentic</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link active">Menu</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <a href="cart.html" class="nav-cart-btn" aria-label="Shopping Cart">
+          <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-badge badge-hidden" id="nav-cart-count">0</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MENU PAGE HEADER
+       ========================================== -->
+  <main>
+    <section class="menu-page-header">
+      <div class="container">
+        <span class="section-tag">Authentic Japanese Cuisine</span>
+        <h1 class="section-title">Our Food Menu</h1>
+        <div class="japanese-divider">
+          <span class="divider-icon">🌸</span>
+        </div>
+        <p class="section-subtitle">
+          Handcrafted sushi rolls, pristine nigiri, slow-simmered ramen, and artisan desserts prepared fresh with prime ingredients.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       FILTER CONTROLS & CATEGORY TABS
+       ========================================== -->
+    <section class="menu-filter-wrapper" aria-label="Menu Filters">
+      <div class="container">
+        <div class="filter-controls-bar">
+          <!-- Search box -->
+          <div class="search-box-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="menu-search-input" class="search-input" placeholder="Search dishes by name or ingredient..." aria-label="Search menu items">
+          </div>
+
+          <!-- Dietary Filter -->
+          <div class="diet-filter-wrap">
+            <label for="diet-filter-select" style="font-size: 0.88rem; font-weight: 600; color: var(--color-charcoal);">Diet:</label>
+            <select id="diet-filter-select" class="diet-select" aria-label="Filter by dietary preference">
+              <option value="all">All Items</option>
+              <option value="veg">Vegetarian Only (●)</option>
+              <option value="non-veg">Non-Vegetarian (▲)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="category-tabs" role="tablist" aria-label="Food Categories">
+          <button class="category-filter-btn active" data-category="all" role="tab">All</button>
+          <button class="category-filter-btn" data-category="sushi-rolls" role="tab">Sushi Rolls</button>
+          <button class="category-filter-btn" data-category="nigiri" role="tab">Nigiri</button>
+          <button class="category-filter-btn" data-category="sashimi" role="tab">Sashimi</button>
+          <button class="category-filter-btn" data-category="ramen" role="tab">Ramen</button>
+          <button class="category-filter-btn" data-category="appetizers" role="tab">Appetizers</button>
+          <button class="category-filter-btn" data-category="drinks" role="tab">Drinks</button>
+          <button class="category-filter-btn" data-category="desserts" role="tab">Desserts</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       MENU ITEMS GRID
+       ========================================== -->
+    <section class="section" style="padding-top: 3rem;">
+      <div class="container">
+        <div class="food-grid" id="menu-items-grid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOD DETAILS MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="food-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">✕</button>
+      
+      <div class="modal-image-wrap">
+        <img src="images/california-roll.jpg" alt="Dish photo" id="modal-image" class="modal-img">
+      </div>
+
+      <div class="modal-details">
+        <div class="modal-header-meta">
+          <span class="modal-category-tag" id="modal-category">Sushi Rolls</span>
+          <span class="diet-indicator" id="modal-diet">NON-VEG</span>
+          <span class="modal-badge-tag" id="modal-badge">Chef's Choice</span>
+        </div>
+
+        <h3 class="modal-food-title" id="modal-title">Dish Title</h3>
+        <div class="modal-price-tag" id="modal-price">₹249</div>
+        <div class="modal-portion-text" id="modal-portion">Portion: 8 pieces</div>
+
+        <p class="modal-description" id="modal-desc">
+          Detailed dish description goes here.
+        </p>
+
+        <div class="modal-action-row">
+          <div class="modal-qty-control">
+            <button class="modal-qty-btn" id="modal-qty-minus" aria-label="Decrease quantity">−</button>
+            <span class="modal-qty-val" id="modal-qty-value">1</span>
+            <button class="modal-qty-btn" id="modal-qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+
+          <button class="btn btn-primary modal-add-cart-btn" id="modal-add-btn">
+            Add to Cart • <span id="modal-total-price">₹249</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 0.75rem;">
+            <span class="logo-stamp">桜</span>
+            <span>Sakura Sushi</span>
+          </a>
+          <p class="footer-tagline">Fresh Sushi. Authentic Taste.</p>
+          <p class="footer-about-text">
+            Handcrafted Japanese sushi, nigiri, and ramen made with fresh, sustainable ingredients and sincere culinary dedication.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <div class="footer-hours-list">
+            <p><strong>Monday – Friday:</strong><br>11:00 AM – 10:30 PM</p>
+            <p><strong>Saturday – Sunday:</strong><br>11:00 AM – 11:00 PM</p>
+            <p><small style="color: var(--color-gold);">Delivery Fee: ₹40 (FREE above ₹799)</small></p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Visit & Connect</h4>
+          <p style="color: #a8a096; font-size: 0.88rem; line-height: 1.5; margin-bottom: 0.75rem;">
+            123 Sakura Street, Ludhiana, Punjab<br>
+            Phone: +91 98765 43210<br>
+            Email: hello@sakurasushi.example
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sakura Sushi. College Project.</p>
+        <p>Built with HTML5, CSS3 & Vanilla JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout and place your demo order at Sakura Sushi. Fast doorstep delivery in Ludhiana.">
+  <title>Checkout | Sakura Sushi</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Sakura Sushi Homepage">
+        <span class="logo-stamp">桜</span>
+        <div class="logo-text-wrap">
+          <span>Sakura Sushi</span>
+          <span class="logo-tagline-tiny">Fresh • Authentic</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <a href="cart.html" class="nav-cart-btn" aria-label="Shopping Cart">
+          <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-badge badge-hidden" id="nav-cart-count">0</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       CHECKOUT PAGE CONTENT
+       ========================================== -->
+  <main>
+    <section class="checkout-section">
+      <div class="container">
+        <div class="page-headline">
+          <span class="section-tag">Final Step</span>
+          <h1>Checkout & Delivery Details</h1>
+          <p>Provide your delivery information to complete your demo order.</p>
+        </div>
+
+        <!-- Checkout Form Grid -->
+        <div class="checkout-grid" id="checkout-grid">
+          <!-- Form Card -->
+          <div class="checkout-form-card">
+            <form id="checkout-form" novalidate>
+              <!-- 1. Customer Information -->
+              <h2 class="form-group-title">1. Customer Information</h2>
+              
+              <div class="form-field">
+                <label for="customer-name" class="form-label">Full Name <span class="required-star">*</span></label>
+                <input type="text" id="customer-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                <div class="form-error-msg"></div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="customer-phone" class="form-label">Phone Number <span class="required-star">*</span></label>
+                  <input type="tel" id="customer-phone" class="form-input" placeholder="e.g. 9876543210" maxlength="10" required>
+                  <div class="form-error-msg"></div>
+                </div>
+
+                <div class="form-field">
+                  <label for="customer-email" class="form-label">Email Address <span class="required-star">*</span></label>
+                  <input type="email" id="customer-email" class="form-input" placeholder="e.g. rahul@example.com" required>
+                  <div class="form-error-msg"></div>
+                </div>
+              </div>
+
+              <!-- 2. Delivery Address -->
+              <h2 class="form-group-title" style="margin-top: 2rem;">2. Delivery Address</h2>
+
+              <div class="form-field">
+                <label for="customer-address" class="form-label">Street Address & House No. <span class="required-star">*</span></label>
+                <textarea id="customer-address" class="form-textarea" rows="2" placeholder="e.g. Flat 302, Green Valley Apartments, College Road" required></textarea>
+                <div class="form-error-msg"></div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="customer-city" class="form-label">City <span class="required-star">*</span></label>
+                  <input type="text" id="customer-city" class="form-input" value="Ludhiana" placeholder="e.g. Ludhiana" required>
+                  <div class="form-error-msg"></div>
+                </div>
+
+                <div class="form-field">
+                  <label for="customer-pincode" class="form-label">Pincode (6 digits) <span class="required-star">*</span></label>
+                  <input type="text" id="customer-pincode" class="form-input" placeholder="e.g. 141001" maxlength="6" required>
+                  <div class="form-error-msg"></div>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="customer-notes" class="form-label">Delivery Instructions / Dietary Notes (Optional)</label>
+                <input type="text" id="customer-notes" class="form-input" placeholder="e.g. Please include extra wasabi and pickled ginger">
+              </div>
+
+              <!-- 3. Payment Method -->
+              <h2 class="form-group-title" style="margin-top: 2rem;">3. Payment Method</h2>
+
+              <div class="payment-options-group">
+                <label class="payment-option-label">
+                  <input type="radio" name="paymentMethod" value="Cash on Delivery" checked>
+                  <div class="payment-label-text">
+                    <strong>💵 Cash on Delivery (COD)</strong>
+                    <small>Pay with cash or scan UPI upon doorstep delivery</small>
+                  </div>
+                </label>
+
+                <label class="payment-option-label">
+                  <input type="radio" name="paymentMethod" value="Demo Online Payment">
+                  <div class="payment-label-text">
+                    <strong>💳 Demo Online Payment (Simulated)</strong>
+                    <small>Instant simulated UPI / Card verification for viva presentation</small>
+                  </div>
+                </label>
+              </div>
+
+              <div class="demo-payment-alert">
+                ℹ <strong>College Viva Notice:</strong> This is an academic frontend project. No real financial transaction will occur.
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-place-order">
+                Place Order Now ➔
+              </button>
+            </form>
+          </div>
+
+          <!-- Mini Summary Sidebar -->
+          <div class="checkout-summary-card">
+            <h3>Order Preview</h3>
+            
+            <div class="checkout-mini-items" id="checkout-summary-items">
+              <!-- Dynamically populated by script.js -->
+            </div>
+
+            <div class="summary-rows">
+              <div class="summary-row">
+                <span>Items Subtotal</span>
+                <span id="checkout-subtotal">₹0</span>
+              </div>
+              <div class="summary-row">
+                <span>Delivery Charge</span>
+                <span id="checkout-delivery">₹40</span>
+              </div>
+            </div>
+
+            <div class="summary-total-row">
+              <span>Total Payable</span>
+              <span id="checkout-grand-total">₹0</span>
+            </div>
+
+            <div style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.45; margin-top: 1rem;">
+              ⏱ <strong>Estimated Preparation:</strong> 25–35 minutes.<br>
+              🍣 Packed with eco-friendly bamboo chopsticks & fresh wasabi.
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty Cart Notice on Checkout -->
+        <div class="cart-empty-box" id="checkout-empty-notice" style="display: none;">
+          <div class="cart-empty-icon">🍱</div>
+          <h2>Cannot proceed with empty cart</h2>
+          <p>You haven't selected any dishes yet. Please visit our menu to select food items before checking out.</p>
+          <a href="menu.html" class="btn btn-primary btn-lg">Explore Menu</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 0.75rem;">
+            <span class="logo-stamp">桜</span>
+            <span>Sakura Sushi</span>
+          </a>
+          <p class="footer-tagline">Fresh Sushi. Authentic Taste.</p>
+          <p class="footer-about-text">
+            Handcrafted Japanese sushi, nigiri, and ramen made with fresh, sustainable ingredients and sincere culinary dedication.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <div class="footer-hours-list">
+            <p><strong>Monday – Friday:</strong><br>11:00 AM – 10:30 PM</p>
+            <p><strong>Saturday – Sunday:</strong><br>11:00 AM – 11:00 PM</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support & Inquiries</h4>
+          <p style="color: #a8a096; font-size: 0.88rem; line-height: 1.5; margin-bottom: 0.75rem;">
+            123 Sakura Street, Ludhiana, Punjab<br>
+            Phone: +91 98765 43210<br>
+            Email: hello@sakurasushi.example
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sakura Sushi. College Project.</p>
+        <p>Built with HTML5, CSS3 & Vanilla JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>

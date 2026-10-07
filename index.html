@@ -3,242 +3,325 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sakura Sushi - Fresh sushi and authentic Japanese-inspired taste in Ludhiana.">
+  <meta name="description" content="Sakura Sushi - Fresh Sushi. Authentic Taste. Handcrafted Japanese-inspired sushi, sashimi, and ramen.">
   <title>Sakura Sushi | Fresh Sushi. Authentic Taste.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="index.html" class="brand" aria-label="Sakura Sushi home">
-        <span class="brand-mark">桜</span>
-        <span>
-          <strong>Sakura Sushi</strong>
-          <small>Fresh Sushi. Authentic Taste.</small>
-        </span>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Sakura Sushi Homepage">
+        <span class="logo-stamp">桜</span>
+        <div class="logo-text-wrap">
+          <span>Sakura Sushi</span>
+          <span class="logo-tagline-tiny">Fresh • Authentic</span>
+        </div>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html" class="active">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="cart.html" class="cart-link">
-          Cart <span class="cart-count">0</span>
-        </a>
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <a href="cart.html" class="nav-cart-btn" aria-label="Shopping Cart">
+          <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-badge badge-hidden" id="nav-cart-count">0</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
   </header>
 
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">Japanese-inspired dining</p>
-          <h1>Fresh Sushi.<br><span>Authentic Taste.</span></h1>
-          <p class="hero-text">
-            Carefully crafted sushi, warm ramen and Japanese-inspired favourites,
-            made for a relaxed dining experience.
-          </p>
-
-          <div class="hero-actions">
-            <a href="menu.html" class="btn btn-primary">Explore Menu</a>
-            <a href="about.html" class="btn btn-secondary">Our Story</a>
-          </div>
-
-          <div class="hero-note">
-            <span>✦</span>
-            Fresh ingredients · Thoughtful preparation · Simple flavours
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-label="Decorative sushi illustration">
-          <div class="sushi-plate">
-            <div class="sushi-piece piece-one">
-              <span></span>
-            </div>
-            <div class="sushi-piece piece-two">
-              <span></span>
-            </div>
-            <div class="sushi-piece piece-three">
-              <span></span>
-            </div>
-            <div class="sushi-piece piece-four">
-              <span></span>
-            </div>
-            <div class="wasabi"></div>
-            <div class="ginger"></div>
-          </div>
-          <span class="hero-stamp">SAKURA<br><small>寿司</small></span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="popular">
+    <section class="hero-section">
       <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Customer favourites</p>
-            <h2>Popular Picks</h2>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="hero-subtitle">🌸 Artisanal Japanese Cuisine</span>
+            <h1 class="hero-title">Fresh Sushi.<br><span>Authentic Taste.</span></h1>
+            <p class="hero-description">
+              Handcrafted Japanese-inspired dishes made with fresh ingredients and served with care. Experience the subtle harmony of seasoned rice, prime catch, and culinary tradition.
+            </p>
+            <div class="hero-buttons">
+              <a href="menu.html" class="btn btn-primary btn-lg">Explore Menu</a>
+              <a href="menu.html" class="btn btn-secondary btn-lg">Order Now</a>
+            </div>
           </div>
-          <a href="menu.html" class="text-link">View full menu →</a>
-        </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="food-visual food-salmon" aria-hidden="true">
-              <span class="food-rice"></span>
-              <span class="food-fish"></span>
+          <div class="hero-image-wrapper">
+            <div class="hero-image-card">
+              <img src="images/hero-sushi.jpg" alt="Artisan sushi platter with fresh salmon nigiri and sushi rolls" class="hero-img">
             </div>
-            <div class="product-info">
-              <div class="product-meta">
-                <h3>Salmon Roll</h3>
-                <span>₹299</span>
+            <div class="hero-floating-badge">
+              <span class="floating-badge-icon">🍣</span>
+              <div class="floating-badge-text">
+                <strong>Handcrafted Daily</strong>
+                <span>100% Fresh & Artisanal</span>
               </div>
-              <p>Fresh salmon, seasoned rice and nori with a clean, balanced finish.</p>
-              <button class="btn btn-small add-to-cart"
-                      type="button"
-                      data-id="2">
-                Add to Cart
-              </button>
             </div>
-          </article>
-
-          <article class="product-card">
-            <div class="food-visual food-dragon" aria-hidden="true">
-              <span class="food-roll"></span>
-              <span class="food-avocado"></span>
-            </div>
-            <div class="product-info">
-              <div class="product-meta">
-                <h3>Dragon Roll</h3>
-                <span>₹379</span>
-              </div>
-              <p>A rich sushi roll layered with creamy avocado and savoury fillings.</p>
-              <button class="btn btn-small add-to-cart"
-                      type="button"
-                      data-id="4">
-                Add to Cart
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="food-visual food-ramen" aria-hidden="true">
-              <span class="ramen-bowl"></span>
-              <span class="ramen-noodles"></span>
-            </div>
-            <div class="product-info">
-              <div class="product-meta">
-                <h3>Chicken Ramen</h3>
-                <span>₹349</span>
-              </div>
-              <p>Comforting ramen with chicken, noodles and a warm savoury broth.</p>
-              <button class="btn btn-small add-to-cart"
-                      type="button"
-                      data-id="11">
-                Add to Cart
-              </button>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container feature-grid">
-        <div>
-          <p class="eyebrow">Why Sakura Sushi</p>
-          <h2>Simple food, carefully made.</h2>
-          <p class="section-text">
-            We focus on fresh flavours, thoughtful presentation and a calm,
-            welcoming atmosphere inspired by Japanese dining.
+    <!-- ==========================================
+         RESTAURANT INFORMATION / HIGHLIGHTS SECTION
+         ========================================== -->
+    <section class="highlights-section" aria-label="Restaurant Highlights">
+      <div class="container">
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-icon-box">🐟</div>
+            <div class="highlight-content">
+              <h4>Fresh Ingredients</h4>
+              <p>Finest sashimi-grade catch and organic seasonal produce sourced daily.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon-box">🔪</div>
+            <div class="highlight-content">
+              <h4>Handcrafted Daily</h4>
+              <p>Each roll and nigiri is precision-crafted by skilled sushi artisans.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon-box">⛩️</div>
+            <div class="highlight-content">
+              <h4>Authentic Japanese Inspired</h4>
+              <p>Honoring culinary traditions with modern balance and delicate flavors.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon-box">⚡</div>
+            <div class="highlight-content">
+              <h4>Fast Service</h4>
+              <p>Quick hygienic kitchen preparation and swift doorstep delivery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         POPULAR PICKS SECTION
+         ========================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Chef's Recommendations</span>
+          <h2 class="section-title">Popular Picks</h2>
+          <div class="japanese-divider">
+            <span class="divider-icon">🌸</span>
+          </div>
+          <p class="section-subtitle">
+            Our most cherished specialties, beloved by guests for their harmonious textures and authentic flavours.
           </p>
         </div>
 
-        <div class="feature-list">
-          <div class="feature-item">
-            <span class="feature-icon">01</span>
-            <div>
-              <h3>Fresh Ingredients</h3>
-              <p>Quality ingredients selected for every dish.</p>
-            </div>
+        <!-- Dynamic Popular Picks Grid (populated via script.js) -->
+        <div class="food-grid" id="popular-picks-grid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="menu.html" class="btn btn-secondary btn-lg">Explore All Dishes →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         WHY CHOOSE SAKURA SUSHI? SECTION
+         ========================================== -->
+    <section class="why-choose-section section-bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Promise</span>
+          <h2 class="section-title">Why Choose Sakura Sushi?</h2>
+          <div class="japanese-divider">
+            <span class="divider-icon">🌸</span>
+          </div>
+          <p class="section-subtitle">
+            We are dedicated to bringing high-end Japanese dining quality into everyday dining with comfort and integrity.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">🌿</div>
+            <h3>Fresh Ingredients</h3>
+            <p>We source pristine Atlantic salmon, crisp nori, and authentic Shizuoka wasabi with zero artificial preservatives.</p>
           </div>
 
-          <div class="feature-item">
-            <span class="feature-icon">02</span>
-            <div>
-              <h3>Made With Care</h3>
-              <p>Every order is prepared with attention to detail.</p>
-            </div>
+          <div class="feature-box">
+            <div class="feature-icon">🍱</div>
+            <h3>Carefully Prepared</h3>
+            <p>Rice seasoned to balanced acidity with artisanal rice vinegar, rolled with measured pressure for optimal texture.</p>
           </div>
 
-          <div class="feature-item">
-            <span class="feature-icon">03</span>
-            <div>
-              <h3>Easy Ordering</h3>
-              <p>Browse the menu, build your cart and place a demo order easily.</p>
-            </div>
+          <div class="feature-box">
+            <div class="feature-icon">🏷️</div>
+            <h3>Affordable Prices</h3>
+            <p>Exceptional Japanese gastronomy made honest and accessible, so everyone can relish authentic flavours.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">🤝</div>
+            <h3>Friendly Service</h3>
+            <p>Rooted in Japanese "Omotenashi" hospitality, serving our guests with warm attention and heartfelt hospitality.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ==========================================
+         CTA SECTION
+         ========================================== -->
     <section class="cta-section">
-      <div class="container cta-content">
-        <p class="eyebrow">Ready to explore?</p>
-        <h2>Your next favourite dish might be one click away.</h2>
-        <a href="menu.html" class="btn btn-primary">Order From Menu</a>
+      <div class="container">
+        <h2>Ready for your next sushi experience?</h2>
+        <p>Order online for doorstep delivery or explore our full artisanal Japanese menu crafted with pure passion.</p>
+        <div class="cta-buttons">
+          <a href="menu.html" class="btn btn-primary btn-lg">View Full Menu</a>
+          <a href="contact.html" class="btn btn-outline-gold btn-lg">Find Our Location</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a href="index.html" class="brand footer-brand">
-          <span class="brand-mark">桜</span>
-          <span>
-            <strong>Sakura Sushi</strong>
-            <small>Fresh Sushi. Authentic Taste.</small>
-          </span>
-        </a>
-        <p class="footer-note">
-          Japanese-inspired sushi and comfort food for a modern dining experience.
+  <!-- ==========================================
+       FOOD DETAILS MODAL (ACCESSIBLE POPUP)
+       ========================================== -->
+  <div class="modal-overlay" id="food-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">✕</button>
+      
+      <div class="modal-image-wrap">
+        <img src="images/california-roll.jpg" alt="Dish photo" id="modal-image" class="modal-img">
+      </div>
+
+      <div class="modal-details">
+        <div class="modal-header-meta">
+          <span class="modal-category-tag" id="modal-category">Sushi Rolls</span>
+          <span class="diet-indicator" id="modal-diet">NON-VEG</span>
+          <span class="modal-badge-tag" id="modal-badge">Chef's Choice</span>
+        </div>
+
+        <h3 class="modal-food-title" id="modal-title">California Roll</h3>
+        <div class="modal-price-tag" id="modal-price">₹249</div>
+        <div class="modal-portion-text" id="modal-portion">Portion: 8 pieces</div>
+
+        <p class="modal-description" id="modal-desc">
+          Description will appear here.
         </p>
-      </div>
 
-      <div>
-        <h3>Quick Links</h3>
-        <a href="menu.html">Menu</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="cart.html">Cart</a>
-      </div>
+        <div class="modal-action-row">
+          <div class="modal-qty-control">
+            <button class="modal-qty-btn" id="modal-qty-minus" aria-label="Decrease quantity">−</button>
+            <span class="modal-qty-val" id="modal-qty-value">1</span>
+            <button class="modal-qty-btn" id="modal-qty-plus" aria-label="Increase quantity">+</button>
+          </div>
 
-      <div>
-        <h3>Opening Hours</h3>
-        <p>Monday – Sunday</p>
-        <p>11:00 AM – 10:30 PM</p>
-      </div>
-
-      <div>
-        <h3>Connect</h3>
-        <p>Instagram · Facebook</p>
-        <p>hello@sakurasushi.example</p>
+          <button class="btn btn-primary modal-add-cart-btn" id="modal-add-btn">
+            Add to Cart • <span id="modal-total-price">₹249</span>
+          </button>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="container footer-bottom">
-      <p>© 2026 Sakura Sushi. College Project.</p>
-      <p>123 Sakura Street, Ludhiana, Punjab</p>
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 0.75rem;">
+            <span class="logo-stamp">桜</span>
+            <span>Sakura Sushi</span>
+          </a>
+          <p class="footer-tagline">Fresh Sushi. Authentic Taste.</p>
+          <p class="footer-about-text">
+            Handcrafted Japanese sushi, nigiri, and ramen made with fresh, sustainable ingredients and sincere culinary dedication.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <div class="footer-hours-list">
+            <p><strong>Monday – Friday:</strong><br>11:00 AM – 10:30 PM</p>
+            <p><strong>Saturday – Sunday:</strong><br>11:00 AM – 11:00 PM</p>
+            <p><small style="color: var(--color-gold);">Dine-in & Home Delivery Open</small></p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Visit & Connect</h4>
+          <p style="color: #a8a096; font-size: 0.88rem; line-height: 1.5; margin-bottom: 0.75rem;">
+            123 Sakura Street, Ludhiana, Punjab<br>
+            Phone: +91 98765 43210<br>
+            Email: hello@sakurasushi.example
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sakura Sushi. College Project.</p>
+        <p>Built with HTML5, CSS3 & Vanilla JavaScript</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Main JavaScript File -->
   <script src="js/script.js"></script>
 </body>
 </html>
